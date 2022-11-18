@@ -47,7 +47,7 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>2.22.2</version>
                 <configuration>
-                    <groups>animal</groups>
+                    <groups>buzz</groups>
                 </configuration>
             </plugin>
         </plugins>
