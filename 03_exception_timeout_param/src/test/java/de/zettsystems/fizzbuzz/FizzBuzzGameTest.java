@@ -2,7 +2,6 @@ package de.zettsystems.fizzbuzz;
 
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.params.ParameterizedTest;
-import org.junit.jupiter.params.provider.CsvFileSource;
 import org.junit.jupiter.params.provider.MethodSource;
 import org.junit.jupiter.params.provider.ValueSource;
 
@@ -65,13 +64,6 @@ class FizzBuzzGameTest {
         String result = testee.determineWord(number);
 
         assertFalse("Fizz".equals(result));
-    }
-
-    @ParameterizedTest
-    @CsvFileSource(resources = "/fizzbuzz.csv")
-    void testFizzBuzzFromCsvSource(int number, String expected) {
-        String result = testee.determineWord(number);
-        assertEquals(expected, result);
     }
 
     static IntStream intRange() {
